@@ -1,6 +1,0 @@
-{
-  "name": "backend-app",
-  "scripts": {
-    "start": "node backend/index.ts"
-  }
-}
