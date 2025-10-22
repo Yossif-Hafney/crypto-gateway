@@ -1,55 +1,68 @@
-git status# Node.js
+# ========================
+# Node.js
+# ========================
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
 
+# ========================
 # Build output
-/dist
-/build
-/.next
-/.vercel
-/.netlify
-/out
+# ========================
+dist/
+build/
+.next/
+.vercel/
+.netlify/
+.out/
+.railway/
 
+# ========================
 # Environment variables
+# ========================
 .env
 .env.local
 .env.production
 .env.development
+.env.test
 
-# OS files
+# ========================
+# OS / Misc
+# ========================
 .DS_Store
 Thumbs.db
-
-# Logs
-logs/
-*.log
-
-# Railway/Netlify specific
-.netlify/
-.railway/
-
-# Misc
 *.sqlite
 *.db
+*.pem
+*.log
+logs/
 
-# IDE
+# ========================
+# IDE / Editor
+# ========================
 .vscode/
 .idea/
+*.code-workspace
 
+# ========================
 # TypeScript
+# ========================
 *.tsbuildinfo
 
-# Yarn
-/.pnp
+# ========================
+# Testing
+# ========================
+coverage/
+jest-html-reporters-*
+
+# ========================
+# Yarn Plug’n’Play
+# ========================
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
-
-# Testing
-/coverage
-
