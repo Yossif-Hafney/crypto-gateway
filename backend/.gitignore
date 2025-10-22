@@ -1,5 +1,41 @@
+# Node.js
 node_modules/
-dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+/dist
+/build
+/.next
+/.vercel
+/.netlify
+
+# Environment variables
 .env
-*.log
+.env.local
+.env.production
+.env.development
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Railway/Netlify specific
+.netlify/
+.railway/
+
+# Misc
+*.sqlite
+*.db
+
+# IDE
+.vscode/
+.idea/
+
+# TypeScript
+*.tsbuildinfo
