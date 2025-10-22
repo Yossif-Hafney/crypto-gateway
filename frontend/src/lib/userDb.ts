@@ -3,7 +3,7 @@ import { Pool } from "pg";
 // Create PostgreSQL connection pool
 const userDb = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: false, // Disable SSL for local PostgreSQL
+  ssl: { rejectUnauthorized: false }, // needed for Railway
 });
 
 // Create users table if not exists
