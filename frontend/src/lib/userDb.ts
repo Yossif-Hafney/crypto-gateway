@@ -1,20 +1,33 @@
-import Database from "better-sqlite3";
+import { Pool } from "pg";
 
-const userDb = new Database("users.db");
+// Create PostgreSQL connection pool
+const userDb = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: false, // Disable SSL for local PostgreSQL
+});
 
-// Create table if not exists
-userDb
-  .prepare(
-    `
-  CREATE TABLE IF NOT EXISTS users (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT,
-    email TEXT UNIQUE NOT NULL,
-    password TEXT NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-  );
-`
-  )
-  .run();
+// Create users table if not exists
+const initUserDb = async () => {
+  const client = await userDb.connect();
+  try {
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS users (
+        id SERIAL PRIMARY KEY,
+        name VARCHAR(255),
+        email VARCHAR(255) UNIQUE NOT NULL,
+        password VARCHAR(255) NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      )
+    `);
+    console.log("✅ PostgreSQL users table ready");
+  } catch (error) {
+    console.error("❌ Failed to initialize users table:", error);
+  } finally {
+    client.release();
+  }
+};
+
+// Initialize database on startup
+initUserDb();
 
 export default userDb;

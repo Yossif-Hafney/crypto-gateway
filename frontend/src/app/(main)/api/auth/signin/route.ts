@@ -121,9 +121,11 @@ export async function POST(req: Request) {
 
     // 🧠 Find user - use parameterized query (already safe from SQL injection)
     type User = { id: number; email: string; password: string };
-    const user = userDb
-      .prepare("SELECT id, email, password FROM users WHERE email = ?")
-      .get(email.toLowerCase().trim()) as User | undefined;
+    const result = await userDb.query(
+      "SELECT id, email, password FROM users WHERE email = $1",
+      [email.toLowerCase().trim()]
+    );
+    const user = result.rows[0] as User | undefined;
 
     // Always compare password even if user not found (timing attack mitigation)
     const dummyHash = "$2a$12$dummyHashToPreventTimingAttacks1234567890123456";

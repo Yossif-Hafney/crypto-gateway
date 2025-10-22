@@ -35,15 +35,16 @@ export async function POST(req: Request) {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const stmt = userDb.prepare(
-      "INSERT INTO users (email, password, name) VALUES (?, ?, ?)"
-    );
     try {
-      stmt.run(email, hashedPassword, name || null);
+      await userDb.query(
+        "INSERT INTO users (email, password, name) VALUES ($1, $2, $3)",
+        [email, hashedPassword, name || null]
+      );
     } catch (err: unknown) {
       if (
         err instanceof Error &&
-        err.message.includes("UNIQUE constraint failed")
+        (err.message.includes("duplicate key") ||
+          err.message.includes("unique constraint"))
       ) {
         return NextResponse.json(
           { error: "Email already registered." },
