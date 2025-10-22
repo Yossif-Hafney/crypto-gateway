@@ -1,0 +1,20 @@
+{
+  "node": {
+    "40d65b9182e702e46b5d3760438b2ec1616c5a7ec0": {
+      "workers": {
+        "app/(main)/signin/page": {
+          "moduleId": 43135,
+          "async": false,
+          "exportedName": "signinActionWithAuth",
+          "filename": "src/app/(main)/signin/actions.ts"
+        }
+      },
+      "layer": {
+        "app/(main)/signin/page": "action-browser"
+      },
+      "exportedName": "signinActionWithAuth",
+      "filename": "src/app/(main)/signin/actions.ts"
+    }
+  },
+  "edge": {}
+}

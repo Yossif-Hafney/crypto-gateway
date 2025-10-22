@@ -1,0 +1,10 @@
+module.exports=[48913,a=>{"use strict";var b=a.i(87924),c=a.i(72131);function d(){let[a,d]=(0,c.useState)(""),[e,f]=(0,c.useState)("");return(0,b.jsx)("div",{className:"bg-gray-900/80 rounded-xl shadow-lg p-6 mb-8",children:(0,b.jsxs)("div",{className:"grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-3",children:[(0,b.jsxs)("div",{children:[(0,b.jsx)("h2",{className:"text-xl font-bold text-white mb-2",children:"Global Fees"}),(0,b.jsx)("p",{className:"text-sm text-gray-400",children:"Set the global transaction fee percentage."})]}),(0,b.jsx)("div",{className:"md:col-span-2",children:(0,b.jsxs)("div",{className:"max-w-xs",children:[(0,b.jsx)("label",{htmlFor:"fee-percentage",className:"block text-sm font-medium text-white mb-2",children:"Fee Percentage (%)"}),(0,b.jsxs)("div",{className:"relative",children:[(0,b.jsx)("input",{id:"fee-percentage",type:"number",step:"0.1",min:"0",max:"100",value:a,placeholder:"e.g. 2.5%","aria-label":"Fee percentage",onChange:a=>{let b=a.target.value;""===b||/^\d*\.?\d*$/.test(b)&&Number(b)>=0&&100>=Number(b)?(d(b),f("")):f("Enter a value between 0 and 100")},className:`block w-full rounded-lg border bg-gray-800 text-white
+                  placeholder:text-gray-500 px-3 py-2 text-sm transition-colors shadow-sm
+                  focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:outline-none
+                  hover:border-blue-400 disabled:opacity-60 disabled:cursor-not-allowed
+                  appearance-none [&::-webkit-outer-spin-button]:appearance-none
+                  [&::-webkit-inner-spin-button]:appearance-none
+                  [&::-webkit-outer-spin-button]:m-0 [&::-webkit-inner-spin-button]:m-0
+                  ${e?"border-red-500 focus:border-red-500 focus:ring-red-500":"border-gray-700"}`,style:{MozAppearance:"textfield"},autoComplete:"off"}),e&&(0,b.jsx)("span",{className:"block mt-1 text-xs text-red-500",children:e})]})]})})]})})}a.s(["default",()=>d])}];
+
+//# sourceMappingURL=src_app_%28dashboard%29_dashboard_settings_Components_Fees_tsx_ccf2fe85._.js.map

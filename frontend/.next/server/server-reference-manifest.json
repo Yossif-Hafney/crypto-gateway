@@ -1,0 +1,51 @@
+{
+  "node": {
+    "405b717c9bdd1e1270ecd2754ff64374a28a86f148": {
+      "workers": {
+        "app/(main)/contact/page": {
+          "moduleId": 88117,
+          "async": false,
+          "exportedName": "contactAction",
+          "filename": "src/app/(main)/contact/actions.ts"
+        }
+      },
+      "layer": {
+        "app/(main)/contact/page": "action-browser"
+      },
+      "filename": "src/app/(main)/contact/actions.ts",
+      "exportedName": "contactAction"
+    },
+    "40d65b9182e702e46b5d3760438b2ec1616c5a7ec0": {
+      "workers": {
+        "app/(main)/signin/page": {
+          "moduleId": 43135,
+          "async": false,
+          "exportedName": "signinActionWithAuth",
+          "filename": "src/app/(main)/signin/actions.ts"
+        }
+      },
+      "layer": {
+        "app/(main)/signin/page": "action-browser"
+      },
+      "filename": "src/app/(main)/signin/actions.ts",
+      "exportedName": "signinActionWithAuth"
+    },
+    "4025e7bfee5ad808c6be20ae87809b39839052ef7f": {
+      "workers": {
+        "app/(main)/signup/page": {
+          "moduleId": 90927,
+          "async": false,
+          "exportedName": "signupAction",
+          "filename": "src/app/(main)/signup/actions.ts"
+        }
+      },
+      "layer": {
+        "app/(main)/signup/page": "action-browser"
+      },
+      "filename": "src/app/(main)/signup/actions.ts",
+      "exportedName": "signupAction"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "Ucj0vJV5JdBpYj9IFFzmW2GzmhJuMqe76ikFzEz96fg="
+}

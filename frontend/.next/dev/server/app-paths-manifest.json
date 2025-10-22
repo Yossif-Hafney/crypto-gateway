@@ -1,0 +1,7 @@
+{
+  "/(dashboard)/dashboard/notifications/contacts/page": "app/(dashboard)/dashboard/notifications/contacts/page.js",
+  "/(dashboard)/dashboard/notifications/page": "app/(dashboard)/dashboard/notifications/page.js",
+  "/(dashboard)/dashboard/settings/page": "app/(dashboard)/dashboard/settings/page.js",
+  "/(main)/api/contact/route": "app/(main)/api/contact/route.js",
+  "/(main)/contact/page": "app/(main)/contact/page.js"
+}

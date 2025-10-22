@@ -1,0 +1,20 @@
+{
+  "node": {
+    "4025e7bfee5ad808c6be20ae87809b39839052ef7f": {
+      "workers": {
+        "app/(main)/signup/page": {
+          "moduleId": 90927,
+          "async": false,
+          "exportedName": "signupAction",
+          "filename": "src/app/(main)/signup/actions.ts"
+        }
+      },
+      "layer": {
+        "app/(main)/signup/page": "action-browser"
+      },
+      "exportedName": "signupAction",
+      "filename": "src/app/(main)/signup/actions.ts"
+    }
+  },
+  "edge": {}
+}

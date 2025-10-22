@@ -1,0 +1,21 @@
+{
+  "node": {
+    "401f63a766abf9cd7c6374cd9ad27eaad0e55a2b4a": {
+      "workers": {
+        "app/(main)/contact/page": {
+          "moduleId": "[project]/.next-internal/server/app/(main)/contact/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/(main)/contact/actions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "contactAction",
+          "filename": "src/app/(main)/contact/actions.ts"
+        }
+      },
+      "layer": {
+        "app/(main)/contact/page": "action-browser"
+      },
+      "filename": "src/app/(main)/contact/actions.ts",
+      "exportedName": "contactAction"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "TZLmzft/qVuWETeiJ5YY4uXQRNCwLdEnOq/bYdTvdMA="
+}

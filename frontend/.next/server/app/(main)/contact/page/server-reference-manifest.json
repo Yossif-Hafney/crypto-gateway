@@ -1,0 +1,20 @@
+{
+  "node": {
+    "405b717c9bdd1e1270ecd2754ff64374a28a86f148": {
+      "workers": {
+        "app/(main)/contact/page": {
+          "moduleId": 88117,
+          "async": false,
+          "exportedName": "contactAction",
+          "filename": "src/app/(main)/contact/actions.ts"
+        }
+      },
+      "layer": {
+        "app/(main)/contact/page": "action-browser"
+      },
+      "exportedName": "contactAction",
+      "filename": "src/app/(main)/contact/actions.ts"
+    }
+  },
+  "edge": {}
+}
