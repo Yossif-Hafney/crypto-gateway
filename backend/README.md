@@ -14,7 +14,7 @@ npm install
 Copy `.env.example` to `.env` and configure:
 
 ```bash
-cp .env.example .env
+cp .env .env
 ```
 
 Update the values:
