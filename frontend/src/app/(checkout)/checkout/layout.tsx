@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "../../globals.css";
 import Header from "@components/Home/Header";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Crypto Gateway",
@@ -19,6 +20,7 @@ export default function RootLayout({
         <div className="flex h-auto min-h-screen w-full flex-col">
           <Header />
           {children}
+          <Analytics />
         </div>
       </body>
     </html>

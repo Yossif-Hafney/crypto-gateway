@@ -3,6 +3,7 @@ import "../globals.css";
 import Header from "@components/Home/Header";
 import Footer from "@components/Home/Footer";
 import Providers from "@/context/providers";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Crypto Gateway",
@@ -21,6 +22,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
+          <Analytics />
           <Footer />
         </Providers>
       </body>

@@ -6,6 +6,7 @@ import SideBar from "@dashboardComponents/SideBar";
 import { isAuthenticated } from "@/lib/auth";
 import { redirect } from "next/navigation";
 import Providers from "@/context/providers";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Crypto Gateway",
@@ -33,7 +34,10 @@ export default async function RootLayout({
 
             {/* Main Content */}
             <main className="flex-1 ml-12 lg:ml-64 min-h-screen overflow-y-auto bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 p-8">
-              <div className="w-full">{children}</div>
+              <div className="w-full">
+                {children}
+                <Analytics />
+              </div>
             </main>
           </div>
         </Providers>
