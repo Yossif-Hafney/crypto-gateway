@@ -1,6 +1,4 @@
-/**
- * Update a single contact's read status in the database
- */
+
 export const updateContactReadStatus = async (
   id: string,
   isRead: boolean

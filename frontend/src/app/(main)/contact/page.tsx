@@ -4,20 +4,16 @@ import { ContactForm } from "./Components/ContactForm";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { FormDevtoolsPlugin } from "@tanstack/react-form-devtools";
-/**
- * Contact Page Component
- * - Displays contact information and form
- * - Integrates Google reCAPTCHA v3 for spam protection
- */
+
 export default function ContactPage() {
   return (
     <GoogleReCaptchaProvider
       reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY!}
     >
-      <main className="flex-grow">
+      <main className="grow">
         {/* Hero Section */}
-        <section className="relative py-24 sm:py-32">
-          <div className="absolute inset-0 -z-10 bg-gradient-to-b via-transparent to-transparent from-primary/10" />
+        <section className="relative py-16 sm:py-24">
+          <div className="absolute inset-0 -z-10 bg-linear-to-b via-transparent to-transparent from-primary/10" />
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl font-extrabold text-white">Contact Us</h1>
@@ -45,7 +41,7 @@ export default function ContactPage() {
                 <div className="space-y-6">
                   {/* Email */}
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <div className="shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                       <svg
                         className="w-6 h-6 text-primary"
                         fill="none"
@@ -79,7 +75,7 @@ export default function ContactPage() {
 
                   {/* Phone */}
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <div className="shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                       <svg
                         className="w-6 h-6 text-primary"
                         fill="none"
@@ -113,7 +109,7 @@ export default function ContactPage() {
 
                   {/* Live Chat */}
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <div className="shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                       <svg
                         className="w-6 h-6 text-primary"
                         fill="none"

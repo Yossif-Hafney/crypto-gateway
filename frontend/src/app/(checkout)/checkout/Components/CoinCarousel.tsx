@@ -14,7 +14,7 @@ export default function CoinCarousel({
         {coinList.map((coin, i) => (
           <label
             key={i}
-            className={`flex flex-col items-center justify-center min-w-[80px] cursor-pointer snap-center rounded-lg border p-4 text-sm font-medium transition-all duration-200
+            className={`flex flex-col items-center justify-center min-w-20 cursor-pointer snap-center rounded-lg border p-4 text-sm font-medium transition-all duration-200
               ${
                 selected === coin.name
                   ? "ring-2 ring-primary border-transparent"

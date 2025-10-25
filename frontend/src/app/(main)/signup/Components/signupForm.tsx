@@ -6,6 +6,7 @@ import { z } from "zod";
 import { handleSignUpFormSubmit } from "./signupFormLogic";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import LoadingSpinner from "@/Components/LoadingSpinner";
+import { RecaptchaDisclosure } from "@outerComponents/RecaptchaDisclosure";
 
 export default function SignUpForm() {
   const [loading, setLoading] = useState(false);
@@ -37,7 +38,7 @@ export default function SignUpForm() {
   });
 
   return (
-    <main className="flex-grow flex items-center justify-center py-8 px-4 bg-background-dark">
+    <main className="grow flex items-center justify-center py-8 px-4 bg-background-dark">
       <div className="w-full max-w-md space-y-8">
         <div className="bg-background-dark rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-200 p-8">
           <div className="text-center">
@@ -105,14 +106,14 @@ export default function SignUpForm() {
               {(field) => (
                 <div>
                   <label className="sr-only" htmlFor="username">
-                    Username
+                    Merchant Username
                   </label>
                   <input
                     autoComplete="username"
                     className="w-full h-12 px-4 rounded-lg bg-white/5 text-white placeholder-white/40 border-none focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-200"
                     id="username"
                     name="username"
-                    placeholder="Username"
+                    placeholder="Merchant Username"
                     required
                     type="text"
                     value={field.state.value}
@@ -274,6 +275,7 @@ export default function SignUpForm() {
             Sign in
           </Link>
         </p>
+        <RecaptchaDisclosure />
       </div>
     </main>
   );

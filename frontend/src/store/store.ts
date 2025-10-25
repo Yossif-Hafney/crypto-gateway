@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import contactReducer from "./contactSlice";
+import merchantReducer from "./merchantSlice";
 import {
   FLUSH,
   REHYDRATE,
@@ -11,12 +12,23 @@ import {
   REGISTER,
 } from "redux-persist";
 
-const persistConfig = { key: "contacts", storage };
+const contactPersistConfig = { key: "contacts", storage };
+const merchantPersistConfig = { key: "merchants", storage };
 
-const persistedReducer = persistReducer(persistConfig, contactReducer);
+const persistedContactReducer = persistReducer(
+  contactPersistConfig,
+  contactReducer
+);
+const persistedMerchantReducer = persistReducer(
+  merchantPersistConfig,
+  merchantReducer
+);
 
 export const store = configureStore({
-  reducer: { contacts: persistedReducer },
+  reducer: {
+    contacts: persistedContactReducer,
+    merchants: persistedMerchantReducer,
+  },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

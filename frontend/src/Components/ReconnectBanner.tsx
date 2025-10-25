@@ -12,7 +12,7 @@ export function ReconnectBanner({ onDismiss }: ReconnectBannerProps) {
             Server reconnected! New updates available.
           </p>
           <p className="text-sm text-gray-400">
-            Reload the page to see latest contacts
+            Reload the page to see latest updates
           </p>
         </div>
       </div>

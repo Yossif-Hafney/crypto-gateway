@@ -57,7 +57,7 @@ coverage/
 jest-html-reporters-*
 
 # ========================
-# Yarn Plug’n’Play
+# Yarn Plug'n'Play
 # ========================
 .pnp
 .pnp.*
@@ -66,3 +66,9 @@ jest-html-reporters-*
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+
+# ========================
+# Documentation
+# ========================
+*.md
+!README.md

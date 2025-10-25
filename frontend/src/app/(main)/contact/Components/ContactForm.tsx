@@ -3,9 +3,9 @@ import { useState } from "react";
 import { z } from "zod";
 import { useForm } from "@tanstack/react-form";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import Link from "next/link";
 import { ContactInput, ContactTextarea } from "./ContactInput";
 import { handleContactFormSubmit } from "./contactFormLogic";
+import { RecaptchaDisclosure } from "@outerComponents/RecaptchaDisclosure";
 
 export function ContactForm() {
   const [isSending, setIsSending] = useState(false);
@@ -175,28 +175,8 @@ export function ContactForm() {
         )}
       </button>
 
-      {/* reCAPTCHA v3 Disclosure - REQUIRED when badge is hidden */}
-      <p className="text-xs text-gray-500 text-center mt-4">
-        This Page is protected by reCAPTCHA and the Google{" "}
-        <Link
-          href="https://policies.google.com/privacy"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary hover:underline"
-        >
-          Privacy Policy
-        </Link>{" "}
-        and{" "}
-        <Link
-          href="https://policies.google.com/terms"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-primary hover:underline"
-        >
-          Terms of Service
-        </Link>{" "}
-        apply.
-      </p>
+      {/* reCAPTCHA v3 Disclosure */}
+      <RecaptchaDisclosure />
     </form>
   );
 }

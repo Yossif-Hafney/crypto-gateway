@@ -7,11 +7,24 @@ export const getSocket = (): ReturnType<typeof io> => {
     socket = io(process.env.NEXT_PUBLIC_SOCKET_URL || "http://localhost:3001", {
       transports: ["websocket", "polling"],
       reconnection: true,
-      reconnectionAttempts: 5,
-      reconnectionDelay: 1000,
+      reconnectionAttempts: Infinity,
+      reconnectionDelay: 3000,
     });
   }
   return socket;
+};
+
+export const emitMerchant = (data: {
+  id: string;
+  name: string;
+  email: string;
+  companyName: string;
+  timestamp: string;
+}) => {
+  const socket = getSocket();
+  if (socket.connected) {
+    socket.emit("submitMerchant", data);
+  }
 };
 
 export const emitContact = (data: {

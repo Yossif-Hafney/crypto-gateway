@@ -1,5 +1,5 @@
-import { ConnectionStatus } from "./ConnectionStatus";
-import { ReconnectBanner } from "./ReconnectBanner";
+import { ConnectionStatus } from "@outerComponents/ConnectionStatus";
+import { ReconnectBanner } from "@outerComponents/ReconnectBanner";
 
 interface NotificationHeaderProps {
   isConnected: boolean;

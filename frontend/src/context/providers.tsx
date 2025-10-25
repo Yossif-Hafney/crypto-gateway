@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { store, persistor } from "@/store/store";
 import { useEffect } from "react";
-import { initSocketListeners } from "@/lib/socketListener";
+import { initSocketListeners } from "@/lib/contactSocketListener";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   useEffect(() => {

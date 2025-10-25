@@ -17,6 +17,17 @@ interface NewContactData extends ContactData {
   id: string;
 }
 
+interface MerchantData {
+  name: string;
+  email: string;
+  companyName: string;
+  timestamp: string;
+}
+
+interface NewMerchantData extends MerchantData {
+  id: string;
+}
+
 // Configure Socket.IO with CORS
 const io = new Server(server, {
   cors: {
@@ -43,20 +54,26 @@ app.get("/health", (_req: Request, res: Response) => {
 
 // Socket.IO connection handler
 io.on("connection", (socket: Socket) => {
-  console.log("🟢 Client connected:", socket.id);
+  console.log("🟢 New client connected:", socket.id);
 
   // Handle contact form submission
   socket.on("submitContact", (data: NewContactData) => {
-    console.log("📩 Contact form received:", data);
-
-    // Broadcast to all OTHER clients (excluding the sender)
-    // This prevents the sender from receiving their own contact twice
     socket.broadcast.emit("newContact", data);
-
-    // Send confirmation back to the sender
     socket.emit("contactSubmitted", {
       success: true,
-      message: "Your message has been received!",
+      message: "Your message has been received! We'll get back to you soon.",
+    });
+  });
+
+  // Handle merchant signup
+  socket.on("submitMerchant", (data: NewMerchantData) => {
+    console.log("📩 New merchant signup:", data);
+    // Broadcast to all other clients
+    socket.broadcast.emit("newMerchant", data);
+    // Confirm to sender
+    socket.emit("merchantSubmitted", {
+      success: true,
+      message: "Merchant registered successfully!",
     });
   });
 
@@ -75,7 +92,7 @@ io.on("connection", (socket: Socket) => {
 process.on("uncaughtException", (error: Error) => {
   console.error("💥 Uncaught Exception:", error);
 });
-
+// Global unhandled promise rejection handler
 process.on(
   "unhandledRejection",
   (reason: unknown, promise: Promise<unknown>) => {

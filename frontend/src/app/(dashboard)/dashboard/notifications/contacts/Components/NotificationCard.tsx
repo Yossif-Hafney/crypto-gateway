@@ -14,12 +14,12 @@ export function NotificationCard({
       className={`group relative overflow-hidden rounded-xl border backdrop-blur-sm transition-all duration-300 hover:shadow-lg ${
         notification.isRead
           ? "bg-gray-800/40 border-gray-700/50 hover:border-gray-600"
-          : "bg-gradient-to-br from-blue-900/20 via-gray-800/40 to-gray-800/40 border-blue-500/40 hover:border-blue-400/60 shadow-blue-500/10"
+          : "bg-linear-to-br from-blue-900/20 via-gray-800/40 to-gray-800/40 border-blue-500/40 hover:border-blue-400/60 shadow-blue-500/10"
       }`}
     >
       {/* Unread Indicator Bar */}
       {!notification.isRead && (
-        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-blue-600" />
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-linear-to-b from-blue-500 to-blue-600" />
       )}
 
       <div className="p-6 pl-8">
@@ -29,10 +29,10 @@ export function NotificationCard({
             <div className="flex items-start gap-4">
               {/* Avatar */}
               <div
-                className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ${
+                className={`shrink-0 w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg ${
                   notification.isRead
                     ? "bg-gray-700 text-gray-400"
-                    : "bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/30"
+                    : "bg-linear-to-br from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/30"
                 }`}
               >
                 {notification.name.charAt(0).toUpperCase()}
@@ -45,7 +45,7 @@ export function NotificationCard({
                     {notification.name}
                   </h2>
                   {!notification.isRead && (
-                    <span className="flex-shrink-0 px-2 py-0.5 text-xs font-medium bg-blue-500/20 text-blue-400 rounded-full border border-blue-500/30">
+                    <span className="shrink-0 px-2 py-0.5 text-xs font-medium bg-blue-500/20 text-blue-400 rounded-full border border-blue-500/30">
                       New
                     </span>
                   )}
@@ -73,11 +73,11 @@ export function NotificationCard({
 
           {/* Action Button */}
           {!notification.isRead && (
-            <div className="flex-shrink-0">
+            <div className="shrink-0">
               <button
                 onClick={() => onMarkAsRead(notification.id)}
                 aria-label={`Mark message from ${notification.name} as read`}
-                className="group/btn relative px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white text-sm font-medium rounded-lg shadow-lg shadow-blue-500/20 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5"
+                className="group/btn relative px-4 py-2 bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white text-sm font-medium rounded-lg shadow-lg shadow-blue-500/20 transition-all duration-200 hover:shadow-xl hover:shadow-blue-500/30 hover:-translate-y-0.5"
                 title="Mark as read"
               >
                 <span className="flex items-center gap-2">

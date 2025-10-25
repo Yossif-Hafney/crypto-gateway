@@ -6,6 +6,7 @@ import { z } from "zod";
 import { handleSignInFormSubmit } from "./signinFormLogic";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import LoadingSpinner from "@/Components/LoadingSpinner";
+import { RecaptchaDisclosure } from "@outerComponents/RecaptchaDisclosure";
 
 export default function SignInForm() {
   const [status, setStatus] = useState<{
@@ -64,7 +65,7 @@ export default function SignInForm() {
                     className="block text-sm font-medium text-white/80"
                     htmlFor="email"
                   >
-                    Email or username
+                    Email
                   </label>
                   <div className="mt-1">
                     <input
@@ -77,7 +78,7 @@ export default function SignInForm() {
                       }`}
                       id="email"
                       name="email"
-                      placeholder="you@example.com"
+                      placeholder="crypto@example.com"
                       required
                       type="text"
                       value={field.state.value ?? ""}
@@ -204,6 +205,7 @@ export default function SignInForm() {
             Sign up
           </Link>
         </p>
+        <RecaptchaDisclosure />
       </div>
     </main>
   );

@@ -1,15 +1,21 @@
 "use client";
 import { useNotifications } from "./hooks/useNotifications";
-import { useSocketConnection } from "./hooks/useSocketConnection";
+import { useSocketConnection } from "@hooks/useSocketConnection";
 import { NotificationHeader } from "./Components/NotificationHeader";
 import { NotificationCard } from "./Components/NotificationCard";
 import { EmptyState } from "./Components/EmptyState";
+import { useEffect } from "react";
+import { initSocketListeners } from "@/lib/contactSocketListener";
 
 export default function NotificationsPage() {
   const { notifications, handleMarkAsRead } = useNotifications();
 
   const { isConnected, showReconnectMessage, dismissReconnectMessage } =
     useSocketConnection();
+
+  useEffect(() => {
+    initSocketListeners();
+  }, []);
 
   return (
     <div className="space-y-6">

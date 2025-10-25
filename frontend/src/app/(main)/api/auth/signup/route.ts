@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import userDb from "@/lib/userDb";
 import { checkRateLimit } from "@/lib/rateLimit";
+import io from "socket.io-client";
 
 export async function POST(req: Request) {
   try {
@@ -52,6 +53,24 @@ export async function POST(req: Request) {
         );
       }
       throw err;
+    }
+
+    // Emit merchant signup to Socket.IO server
+    try {
+      const socket = io(
+        process.env.NEXT_PUBLIC_SOCKET_URL || "http://localhost:3001"
+      );
+
+      socket.emit("submitMerchant", {
+        id: Date.now().toString(),
+        name: name || "Unknown",
+        email: email,
+        companyName: `${name}'s Business`,
+        timestamp: new Date().toISOString(),
+      });
+    } catch (socketError) {
+      console.error("Error emitting merchant signup:", socketError);
+      // Continue with signup success even if socket emission fails
     }
 
     return NextResponse.json(

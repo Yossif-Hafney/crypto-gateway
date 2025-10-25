@@ -5,9 +5,9 @@ export const useSocketConnection = () => {
   const [isConnected, setIsConnected] = useState(false);
   const [showReconnectMessage, setShowReconnectMessage] = useState(false);
   const isFirstConnection = useRef(true);
+  const socket = getSocket();
 
   useEffect(() => {
-    const socket = getSocket();
     setIsConnected(socket.connected);
 
     socket.on("connect", () => {
@@ -30,11 +30,11 @@ export const useSocketConnection = () => {
       socket.off("connect");
       socket.off("disconnect");
     };
-  }, []);
+  }, [socket]);
 
   const dismissReconnectMessage = () => {
     setShowReconnectMessage(false);
   };
 
-  return { isConnected, showReconnectMessage, dismissReconnectMessage };
+  return { isConnected, showReconnectMessage, dismissReconnectMessage, socket };
 };
