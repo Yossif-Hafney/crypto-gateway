@@ -32,7 +32,7 @@ export default function CoinLogo({
         </h2>
       ) : (
         <h2 className=" text-xl font-bold tracking-tight text-white ">
-          CoinGate
+          HYGate
         </h2>
       )}
     </Link>
