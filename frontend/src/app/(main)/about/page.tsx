@@ -30,7 +30,7 @@ export default function AboutPage() {
             className="text-4xl font-extrabold tracking-tighter text-white sm:text-5xl md:text-6xl"
             variants={fadeUp}
           >
-            About CoinGate
+            About HYGate
           </motion.h1>
           <motion.p
             className="mx-auto mt-6 max-w-2xl text-lg text-gray-300"
@@ -106,7 +106,7 @@ export default function AboutPage() {
       >
         <h2 className="text-3xl font-bold mb-4">Ready to Join the Future?</h2>
         <p className="mb-8 text-gray-300">
-          Start accepting crypto payments easily with CoinGate.
+          Start accepting crypto payments easily with HYGate.
         </p>
         <motion.button
           whileHover={{ scale: 1.05 }}

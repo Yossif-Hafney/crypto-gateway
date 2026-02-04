@@ -14,10 +14,10 @@ export default function Questions() {
         <div className="mt-12 space-y-4">
           <div>
             <h3 className="text-lg font-semibold text-white cursor-default">
-              What is CoinGate?
+              What is HYGate?
             </h3>
             <p className="mt-2 text-sm text-gray-400">
-              CoinGate is a crypto payment gateway that acts as an intermediary
+              HYGate is a crypto payment gateway that acts as an intermediary
               between users and merchants. We facilitate seamless and secure
               transactions, allowing you to pay for goods and services with your
               cryptocurrency without us ever holding or managing your assets.
@@ -25,10 +25,10 @@ export default function Questions() {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-white cursor-default">
-              Does CoinGate buy or sell cryptocurrency?
+              Does HYGate buy or sell cryptocurrency?
             </h3>
             <p className="mt-2 text-sm text-gray-400">
-              No, CoinGate does not buy, sell, or manage cryptocurrencies. Our
+              No, HYGate does not buy, sell, or manage cryptocurrencies. Our
               service is strictly a payment gateway that facilitates
               transactions directly between your crypto wallet and a
               merchant&#39;s.
@@ -47,7 +47,7 @@ export default function Questions() {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-white cursor-default">
-              Is my crypto safe with CoinGate?
+              Is my crypto safe with HYGate?
             </h3>
             <p className="mt-2 text-sm text-gray-400">
               Absolutely. Your crypto is never held by us. Transactions are

@@ -9,7 +9,7 @@ export default function HowItWorks() {
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
             Our payment gateway is designed for simplicity and security. This
             diagram illustrates the seamless flow of a transaction from you to
-            the merchant through CoinGate.
+            the merchant through HYGate.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default function HowItWorks() {
             </h3>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
               You select crypto as your payment method on a merchant’s site and
-              are redirected to CoinGate.
+              are redirected to HYGate.
             </p>
           </div>
 
@@ -51,7 +51,7 @@ export default function HowItWorks() {
               </svg>
             </div>
             <h3 className="mt-4 text-lg font-bold text-gray-900 dark:text-white">
-              2. CoinGate Facilitates
+              2. HYGate Facilitates
             </h3>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
               Our gateway provides the payment details, allowing a direct

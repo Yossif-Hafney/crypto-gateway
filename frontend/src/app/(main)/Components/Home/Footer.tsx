@@ -36,7 +36,7 @@ export default function Footer() {
           </Link>
         </div>
         <p className="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
-          © 2023 CoinGate. All rights reserved.
+          © 2026 HYGate. All rights reserved.
         </p>
       </div>
     </footer>

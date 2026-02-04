@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
           </div>
           <div className="prose-invert  max-w-none">
             <p className="lead">
-              This Privacy Policy describes how CoinGate collects, uses, and
+              This Privacy Policy describes how HYGate collects, uses, and
               protects your personal information. We are committed to
               safeguarding your privacy and ensuring compliance with applicable
               data protection laws.
@@ -113,9 +113,9 @@ export default function PrivacyPolicyPage() {
                   Policy, please contact us at:
                   <a
                     className="text-primary hover:underline"
-                    href="mailto:support@coingate.com"
+                    href="mailto:support@HYGate.com"
                   >
-                    support@coingate.com
+                    support@HYGate.com
                   </a>
                 </p>
               </section>

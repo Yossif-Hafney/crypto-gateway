@@ -62,10 +62,10 @@ export default function ContactPage() {
                         Email Us
                       </h4>
                       <a
-                        href="mailto:support@coingate.com"
+                        href="mailto:support@HYGate.com"
                         className="text-gray-400 hover:text-primary transition-colors"
                       >
-                        support@coingate.com
+                        support@HYGate.com
                       </a>
                       <p className="text-sm text-gray-500 mt-1">
                         We&apos;ll respond within 24 hours

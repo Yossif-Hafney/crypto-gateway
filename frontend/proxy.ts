@@ -3,6 +3,13 @@ import type { NextRequest } from "next/server";
 
 export function proxy(req: NextRequest) {
   const url = req.nextUrl;
+  const token = req.cookies.get("token")?.value; // ✅ use .value
+
+  // Protect dashboard routes
+
+  if (!token && req.nextUrl.pathname.startsWith("/dashboard")) {
+    return NextResponse.redirect(new URL("/signin", req.url));
+  }
 
   // Protect the choosewallet route
   if (url.pathname.startsWith("/checkout/choosewallet")) {
@@ -36,5 +43,5 @@ export function proxy(req: NextRequest) {
 
 // Limit middleware only to these routes for performance
 export const config = {
-  matcher: ["/checkout/:path*"],
+  matcher: ["/checkout/:path*", "/dashboard/:path*"],
 };

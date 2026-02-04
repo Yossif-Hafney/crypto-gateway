@@ -4,10 +4,10 @@ export default function WhyUs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Why Choose CoinGate?
+            Why Choose HYGate?
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-            Discover the features that make CoinGate the ideal choice for
+            Discover the features that make HYGate the ideal choice for
             facilitating your crypto payments.
           </p>
         </div>

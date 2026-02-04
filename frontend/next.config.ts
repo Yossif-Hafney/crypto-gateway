@@ -17,7 +17,6 @@ const nextConfig: NextConfig = {
     turbopackFileSystemCacheForDev: true,
     turbopackFileSystemCacheForBuild: true,
   },
-  allowedDevOrigins: ["192.168.1.7"],
   images: {
     remotePatterns: [
       {

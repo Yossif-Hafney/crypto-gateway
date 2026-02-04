@@ -44,8 +44,7 @@ export default function MerchantPage() {
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-gray-300">
             Join thousands of merchants worldwide who are expanding their reach
-            and boosting sales by accepting cryptocurrency payments with
-            CoinGate.
+            and boosting sales by accepting cryptocurrency payments with HYGate.
           </p>
 
           <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -73,7 +72,7 @@ export default function MerchantPage() {
             variants={fadeUp}
           >
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Why Partner with CoinGate?
+              Why Partner with HYGate?
             </h2>
             <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
               Unlock a world of new opportunities for your business. We provide

@@ -21,9 +21,9 @@ export default function LandingSection() {
           The Seamless Bridge for Your Crypto Payments
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-300">
-          CoinGate connects you with merchants, enabling smooth and secure
-          crypto transactions. We don&apos;t buy, sell, or hold your crypto—we
-          just make payments happen.
+          HYGate connects you with merchants, enabling smooth and secure crypto
+          transactions. We don&apos;t buy, sell, or hold your crypto—we just
+          make payments happen.
         </p>
         <div className="mt-10">
           <BigButton>

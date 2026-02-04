@@ -10,7 +10,7 @@ export default function CoinLogo({
   return (
     <Link
       href={href}
-      aria-label="CoinGate - Go to homepage"
+      aria-label="HYGate - Go to homepage"
       className="flex items-center gap-3 cursor-pointer pl-2 pt-1"
     >
       <svg
@@ -28,7 +28,7 @@ export default function CoinLogo({
       </svg>
       {dashboard ? (
         <h2 className="hidden lg:block text-xl font-bold tracking-tight text-blue-400 ">
-          CoinGate
+          HYGate
         </h2>
       ) : (
         <h2 className=" text-xl font-bold tracking-tight text-white ">

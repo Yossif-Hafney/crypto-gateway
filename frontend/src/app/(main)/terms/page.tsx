@@ -13,7 +13,7 @@ export default function TermsPage() {
           </div>
           <div className=" prose-slate prose-invert max-w-none space-y-6 text-slate-300">
             <p className="lead">
-              Welcome to CoinGate, a platform for buying, selling, and managing
+              Welcome to HYGate, a platform for buying, selling, and managing
               digital currencies. By accessing or using our services, you agree
               to be bound by these Terms and Conditions. Please read them
               carefully.
@@ -24,7 +24,7 @@ export default function TermsPage() {
                   1. User Responsibilities
                 </h2>
                 <p>
-                  As a user of CoinGate, you are responsible for maintaining the
+                  As a user of HYGate, you are responsible for maintaining the
                   confidentiality of your account information, including your
                   username and password. You agree to notify us immediately of
                   any unauthorized use of your account or any other breach of
@@ -37,12 +37,12 @@ export default function TermsPage() {
                   2. Disclaimers
                 </h2>
                 <p>
-                  CoinGate provides its services on an &#39;as is&#39; and
-                  &#39;as available&#39; basis. We make no representations or
-                  warranties of any kind, express or implied, as to the
-                  operation of our services or the information, content,
-                  materials, or products included on our platform. You expressly
-                  agree that your use of our services is at your sole risk.
+                  HYGate provides its services on an &#39;as is&#39; and &#39;as
+                  available&#39; basis. We make no representations or warranties
+                  of any kind, express or implied, as to the operation of our
+                  services or the information, content, materials, or products
+                  included on our platform. You expressly agree that your use of
+                  our services is at your sole risk.
                 </p>
               </section>
               <section>
@@ -50,9 +50,9 @@ export default function TermsPage() {
                   3. Terms of Service
                 </h2>
                 <p>
-                  CoinGate reserves the right to modify or terminate its
-                  services at any time, for any reason, without notice. We may
-                  also change these Terms and Conditions from time to time. Your
+                  HYGate reserves the right to modify or terminate its services
+                  at any time, for any reason, without notice. We may also
+                  change these Terms and Conditions from time to time. Your
                   continued use of our services after any such changes
                   constitutes your acceptance of the new Terms and Conditions.
                 </p>
@@ -64,7 +64,7 @@ export default function TermsPage() {
                 <p>
                   These Terms and Conditions shall be governed by and construed
                   in accordance with the laws of the jurisdiction in which
-                  CoinGate operates, without regard to its conflict of law
+                  HYGate operates, without regard to its conflict of law
                   provisions.
                 </p>
               </section>
@@ -77,9 +77,9 @@ export default function TermsPage() {
                   please contact us at
                   <a
                     className="text-primary hover:underline"
-                    href="mailto:support@coingate.com"
+                    href="mailto:support@HYGate.com"
                   >
-                    support@coingate.com
+                    support@HYGate.com
                   </a>
                   .
                 </p>
